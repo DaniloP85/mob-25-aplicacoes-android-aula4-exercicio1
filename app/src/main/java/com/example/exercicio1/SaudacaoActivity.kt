@@ -1,5 +1,6 @@
 package com.example.exercicio1
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -10,34 +11,26 @@ import java.nio.charset.Charset
 import java.util.*
 
 class SaudacaoActivity : AppCompatActivity() {
+    @SuppressLint("Range")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_saudacao)
 
-        val data = recoveryFileData()
-        val tokenizer = StringTokenizer(data, ":")
-        val nome = if (tokenizer.hasMoreTokens()) tokenizer.nextToken() else "Sem nome"
-        val tratamento = if (tokenizer.hasMoreTokens()) tokenizer.nextToken() else "Sem tratamento"
+        val db = DataBaseManager(this, "saudacoes")
+        val cursor = db.listaSaudacao()
+        var nome = ""
+        var tratamento = ""
+
+        if (cursor.count > 0){
+            cursor.moveToFirst()
+            nome = cursor.getString(cursor.getColumnIndex("NOME"))
+            tratamento = cursor.getString(cursor.getColumnIndex("TRATAMENTO"))
+        }
+
         if (tratamento.equals("Sem Tratamento")) {
             lbSaudacao.text = nome
         } else {
             lbSaudacao.text = tratamento + " " + nome
-        }
-
-
-    }
-
-    private fun recoveryFileData(): String {
-        return try {
-            val fi = openFileInput("saudacao")
-            val data = fi.readBytes()
-            fi.close()
-            data.toString()
-            data.toString(Charset.defaultCharset())
-        } catch (e: FileNotFoundException) {
-            ""
-        } catch (e: IOException) {
-            ""
         }
     }
 }

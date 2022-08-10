@@ -16,9 +16,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val db = DataBaseManager(this, "saudacoes")
+
         btnSalvar.setOnClickListener {
-            val data = txtNome.text.toString() + ":" + listaTratamento.selectedItem.toString()
-            saveFileData("saudacao", data)
+            db.removeSaudacao()
+            db.insereSaudacao(1, txtNome.text.toString().trim(), listaTratamento.selectedItem.toString())
             Toast.makeText(this, "Salvo com Sucesso", Toast.LENGTH_SHORT).show()
         }
 
