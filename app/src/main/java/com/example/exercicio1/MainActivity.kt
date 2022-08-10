@@ -13,6 +13,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        /*
+        *
+        * nessa primeira versão não estavamos consistindo as informações somente trafegando entre
+        * as tela
+        *
+        * */
+
         btnSalvar.setOnClickListener {
             val saudacaoPersistencia = this.getSharedPreferences("saudacao", Context.MODE_PRIVATE)
             val editor = saudacaoPersistencia.edit()
