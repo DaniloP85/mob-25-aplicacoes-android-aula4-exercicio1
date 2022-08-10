@@ -21,10 +21,20 @@ class MainActivity : AppCompatActivity() {
             editor.putString("tratamento", listaTratamento.selectedItem.toString())
             editor.apply()
 
+            /*
+            * Um Toast é uma mensagem de alerta curta exibida na tela
+            * do Android por um curto intervalo de tempo.
+            * */
+
             Toast.makeText(this, "Salvo com Sucesso", Toast.LENGTH_SHORT).show()
         }
 
-        btnExibit.setOnClickListener {
+        /*
+        * aqui podemos ver a troca de tela
+        * ao clicar no botão exibir
+        * */
+
+        btnExibir.setOnClickListener {
             val intent = Intent(this, SaudacaoActivity::class.java)
             startActivity(intent)
         }
