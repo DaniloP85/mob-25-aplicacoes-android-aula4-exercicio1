@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">exercicio1</string>
+    <string name="nome">Nome</string>
+    <string name="tratamento">Tratamento</string>
+    <string name="salvar_saudacao">Salvar nova Saudação</string>
+    <string name="exibir_saudacao">Exibir Saudação</string>
+    <string-array name="saudacoes">
+        <item>Sr</item>
+        <item>Sra</item>
+        <item>Dr</item>
+        <item>Dra</item>
+        <item>Sem Tratamento</item>
+    </string-array>
+</resources>
