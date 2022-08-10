@@ -13,7 +13,10 @@ class SaudacaoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_saudacao)
-
+        /*
+        * recuperando as informações do arquivo
+        *
+        * */
         val data = recoveryFileData()
         val tokenizer = StringTokenizer(data, ":")
         val nome = if (tokenizer.hasMoreTokens()) tokenizer.nextToken() else "Sem nome"
@@ -26,7 +29,9 @@ class SaudacaoActivity : AppCompatActivity() {
 
 
     }
-
+    /*
+    * Aqui vamos escrever o arquivo, para persistir as informações
+    * */
     private fun recoveryFileData(): String {
         return try {
             val fi = openFileInput("saudacao")

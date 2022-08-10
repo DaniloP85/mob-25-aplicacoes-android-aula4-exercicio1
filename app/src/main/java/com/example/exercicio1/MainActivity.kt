@@ -19,6 +19,10 @@ class MainActivity : AppCompatActivity() {
         btnSalvar.setOnClickListener {
             val data = txtNome.text.toString() + ":" + listaTratamento.selectedItem.toString()
             saveFileData("saudacao", data)
+            /*
+            * exibindo o Toast
+            *
+            * */
             Toast.makeText(this, "Salvo com Sucesso", Toast.LENGTH_SHORT).show()
         }
 
@@ -28,6 +32,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /*
+    * nesta versão vamos utilizar um arquivo para persistir as informações entre as telas
+    *
+    * */
     private fun saveFileData(filename: String, data: String) {
         try {
             val fs = openFileOutput(filename, Context.MODE_PRIVATE)

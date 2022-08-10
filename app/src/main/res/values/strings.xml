@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">exercicio1</string>
+    <string name="app_name">Persistindo com Arquivo</string>
     <string name="nome">Nome</string>
     <string name="tratamento">Tratamento</string>
     <string name="salvar_saudacao">Salvar nova Saudação</string>
