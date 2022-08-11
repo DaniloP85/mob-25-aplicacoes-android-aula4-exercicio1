@@ -34,8 +34,8 @@ class DataBaseManager(
 
     // INSERE VALOR NO BANCO DE DADOS
     fun insereSaudacao(id: Int, nome: String, tratamento: String) {
-        var db = this.writableDatabase
-        var cv = ContentValues()
+        val db = this.writableDatabase
+        val cv = ContentValues()
         cv.put("ID_SAUDACAO", id)
         cv.put("NOME", nome)
         cv.put("TRATAMENTO", tratamento)
@@ -44,14 +44,13 @@ class DataBaseManager(
 
     // LISTA DADOS SALVOS
     fun listaSaudacao(): Cursor {
-        var db = this.writableDatabase
-        var cur = db.rawQuery("select nome,tratamento from saudacao", null)
-        return cur
+        val db = this.writableDatabase
+        return db.rawQuery("select nome,tratamento from saudacao", null)
     }
 
     // REMOVE
     fun removeSaudacao() {
-        var db = this.writableDatabase
+        val db = this.writableDatabase
         db.delete("SAUDACAO", "ID_SAUDACAO=1", null)
     }
 }
