@@ -17,7 +17,7 @@ class SaudacaoActivity : AppCompatActivity() {
         * */
 
         val db = DataBaseManager(this, "saudacoes")
-        val cursor = db.listaSaudacao()
+        val cursor = db.onList()
         var nome = ""
         var tratamento = ""
 

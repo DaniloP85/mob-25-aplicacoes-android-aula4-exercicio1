@@ -33,7 +33,7 @@ class DataBaseManager(
     }
 
     // INSERE VALOR NO BANCO DE DADOS
-    fun insereSaudacao(id: Int, nome: String, tratamento: String) {
+    fun onInsert(id: Int, nome: String, tratamento: String) {
         val db = this.writableDatabase
         val cv = ContentValues()
         cv.put("ID_SAUDACAO", id)
@@ -43,13 +43,13 @@ class DataBaseManager(
     }
 
     // LISTA DADOS SALVOS
-    fun listaSaudacao(): Cursor {
+    fun onList(): Cursor {
         val db = this.writableDatabase
         return db.rawQuery("select nome,tratamento from saudacao", null)
     }
 
     // REMOVE
-    fun removeSaudacao() {
+    fun onRemove() {
         val db = this.writableDatabase
         db.delete("SAUDACAO", "ID_SAUDACAO=1", null)
     }

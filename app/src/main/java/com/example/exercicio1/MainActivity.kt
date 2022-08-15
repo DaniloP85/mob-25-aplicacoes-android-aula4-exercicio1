@@ -19,8 +19,8 @@ class MainActivity : AppCompatActivity() {
         val db = DataBaseManager(this, "saudacoes")
 
         btnSalvar.setOnClickListener {
-            db.removeSaudacao()
-            db.insereSaudacao(
+            db.onRemove()
+            db.onInsert(
                 1,
                 txtNome.text.toString().trim(),
                 listaTratamento.selectedItem.toString()
