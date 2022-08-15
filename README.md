@@ -8,10 +8,26 @@ VersionName: "1"
 # Introdução
 Usando a API SharedPreferences, para salvar informações entre as telas
 
-Neste exemplo, vamos utilizar a palavra **saudacao**, 
-como chave para recuperar o nome digitado na primeira e mostrar o mesmo nome na segunda tela.
+Neste exemplo, vamos utilizar a palavra **saudacao**, como chave para armazenar e depois recuperar o nome digitado e o tratamento escolhido na primeira e mostrar o mesmo nome na segunda tela.
 
-Adicionando uma saudação ao nome escolhido.
+## SharedPreferences
+### Adicionado 
+```
+val saudacaoPersistencia = this.getSharedPreferences("saudacao", Context.MODE_PRIVATE)
+val editor = saudacaoPersistencia.edit()
+editor.putString("nome", txtNome.text.toString())
+editor.putString("tratamento", listaTratamento.selectedItem.toString())
+editor.apply()
+```
+Os sub-elementos sendo adicionado no arquivo criado pelo SharedPreferences.
+
+### Recuperando
+```
+val saudacaoPersistencia = this.getSharedPreferences("saudacao", Context.MODE_PRIVATE)
+val nome = saudacaoPersistencia.getString("nome", "")
+val tratamento = saudacaoPersistencia.getString("tratamento", "")
+```
+
 
 | Tela 1 | Tela 2     |
 | ------------- | ------------- |
