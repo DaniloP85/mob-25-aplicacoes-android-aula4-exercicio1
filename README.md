@@ -6,7 +6,11 @@ VersionCode: 1.0
 VersionName: "1"
 
 # Introdução
-Vamos guardar as informações da primeira tela em um arquivo para recuperar na segunda tela
+Uma demonstraçao de como guardar informações entre as telas utilizando arquivos.
+
+Para esse exemplo foram criadas duas funções, sendo: **SaudacaoActivity.recoveryFileData** e **MainActivity.saveFileData**
+
+Essas funções tem como ojetivo recuperar e salvar informações no arquivo, para transitar entre as telas, conforme ilustrações a seguir.
 
 | Tela 1     | Tela 2     |  
 | ------------- | ------------- |
