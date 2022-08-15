@@ -35,6 +35,8 @@ val cursor = db.onList()
 ```
 Recuperando todos os elementos inseridos na primeira tela
 
+# Ilustrações
+
 | Tela 1     | Tela 2     |  
 | ------------- | ------------- |
 |![Aplicativo 1](img_readme/v1.png)|![Aplicativo 2](img_readme/v1.1.png)|
