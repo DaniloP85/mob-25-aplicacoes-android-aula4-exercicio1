@@ -8,7 +8,9 @@ VersionName: "1"
 # Introdução
 Usando a API SharedPreferences, para salvar informações entre as telas
 
-Neste exemplo, vamos utilizar a palavra **saudacao**, como chave para armazenar e depois recuperar o nome digitado e o tratamento escolhido na primeira e mostrar o mesmo nome na segunda tela.
+Neste exemplo, vamos utilizar a palavra **saudacao** como chave para armazenar e depois recuperar o nome digitado e o tratamento escolhido.
+
+Esse comportamento será salvo em um arquivo e depois vamos recuperar essas informações na segunda tela, conforme ilustrações.
 
 ## SharedPreferences
 ### Adicionado 
