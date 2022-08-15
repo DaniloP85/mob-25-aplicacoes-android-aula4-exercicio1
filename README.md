@@ -1,16 +1,19 @@
 # mob-25-aplicacoes-android-aula4-exercicio1
 
-# Toast
+# SharedPreferences
 VersionCode: 1.0
 
 VersionName: "1"
 
 # Introdução
-Aqui a ideia e demostrar a transição de tela e a utilizado do Toast.
+Usando a API SharedPreferences, para salvar informações entre as telas
 
-Um Toast é uma mensagem de alerta curta exibida na tela do Android por um curto intervalo de tempo.
+Neste exemplo, vamos utilizar a palavra **saudacao**, 
+como chave para recuperar o nome digitado na primeira e mostrar o mesmo nome na segunda tela.
 
-| Tela 1 com Toast | Tela 2     |
+Adicionando uma saudação ao nome escolhido.
+
+| Tela 1 | Tela 2     |
 | ------------- | ------------- |
 |![Aplicativo 1](img_readme/v1.png)|![Aplicativo 1](img_readme/v1.1.png)|
 

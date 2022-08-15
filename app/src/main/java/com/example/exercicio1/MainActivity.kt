@@ -15,9 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         /*
         *
-        * nessa primeira versão não estavamos consistindo as informações somente trafegando entre
-        * as tela
-        *
+        * Na linha 22 estamos utilizando o sharedPreferences
         * */
 
         btnSalvar.setOnClickListener {
